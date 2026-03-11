@@ -1,0 +1,102 @@
+/**
+ * Styles for the AI Resource Guide placement.
+ *
+ * @package    aiplacement_airesourceguide
+ * @copyright  2026 Tanmay Deshmukh
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
+
+/* Drawer container - slides in from the right */
+.aiplacement-airesguide-drawer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 400px;
+    max-width: 90vw;
+    height: 100vh;
+    background: #fff;
+    box-shadow: -4px 0 20px rgba(0, 0, 0, 0.15);
+    z-index: 1050;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    overflow-y: auto;
+}
+
+.aiplacement-airesguide-drawer.show {
+    transform: translateX(0);
+}
+
+.airesguide-drawer-inner {
+    padding: 1.5rem;
+}
+
+/* Button on the page */
+.aiplacement-airesguide-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.aiplacement-airesguide-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+/* Concept cards */
+.airesguide-concept-card {
+    border-left: 3px solid #0f6cbf;
+    border-radius: 4px;
+    transition: box-shadow 0.2s ease;
+}
+
+.airesguide-concept-card:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Source link buttons */
+.airesguide-source-link {
+    font-size: 0.8rem;
+    border-radius: 20px;
+    padding: 0.2rem 0.6rem;
+    transition: all 0.2s ease;
+    text-decoration: none;
+}
+
+.airesguide-source-link:hover {
+    background-color: #0f6cbf;
+    border-color: #0f6cbf;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Backdrop overlay when drawer is open (optional) */
+.aiplacement-airesguide-drawer.show::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 400px;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: -1;
+}
+
+/* Responsive - full width on small screens */
+@media (max-width: 576px) {
+    .aiplacement-airesguide-drawer {
+        width: 100vw;
+    }
+
+    .aiplacement-airesguide-drawer.show::before {
+        display: none;
+    }
+}
+
+/* Loading spinner alignment */
+.airesguide-results .spinner-border {
+    width: 2.5rem;
+    height: 2.5rem;
+}

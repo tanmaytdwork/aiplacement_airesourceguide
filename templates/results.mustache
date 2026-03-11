@@ -1,0 +1,33 @@
+{{#hasresults}}
+    {{#concepts}}
+    <div class="card mb-3 airesguide-concept-card">
+        <div class="card-body p-3">
+            <h6 class="card-title mb-1 font-weight-bold text-primary">
+                <i class="fa fa-lightbulb-o mr-1"></i>
+                {{topic}}
+            </h6>
+            <p class="card-text text-muted small mb-2">{{description}}</p>
+
+            <div class="airesguide-sources">
+                {{#sources}}
+                <a href="{{url}}"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="btn btn-sm btn-outline-secondary mr-1 mb-1 airesguide-source-link">
+                    <i class="fa fa-{{icon}} mr-1"></i>
+                    {{label}}
+                    <i class="fa fa-external-link ml-1 small"></i>
+                </a>
+                {{/sources}}
+            </div>
+        </div>
+    </div>
+    {{/concepts}}
+{{/hasresults}}
+
+{{^hasresults}}
+<div class="alert alert-info">
+    <i class="fa fa-info-circle mr-2"></i>
+    {{#str}} noresults, aiplacement_airesourceguide {{/str}}
+</div>
+{{/hasresults}}
