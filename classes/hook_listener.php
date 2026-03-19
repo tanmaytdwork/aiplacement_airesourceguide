@@ -44,7 +44,7 @@ class hook_listener {
             if (!$cm) {
                 return;
             }
-            if($PAGE->bodyid !== 'page-mod-page-view') {
+            if ($PAGE->bodyid !== 'page-mod-page-view') {
                 return;
             }
         } catch (\Exception $e) {
