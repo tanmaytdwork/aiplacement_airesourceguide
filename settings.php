@@ -11,6 +11,14 @@ if ($hassiteconfig) {
         true,
     );
 
+    $settings->add(new admin_setting_configtext(
+        'aiplacement_airesourceguide/max_content_length',
+        new lang_string('max_content_length', 'aiplacement_airesourceguide'),
+        new lang_string('max_content_length_desc', 'aiplacement_airesourceguide'),
+        4000,
+        PARAM_INT
+    ));
+
     $settings->add(new admin_setting_configmulticheckbox(
         'aiplacement_airesourceguide/enabled_sources',
         new lang_string('enabled_sources', 'aiplacement_airesourceguide'),

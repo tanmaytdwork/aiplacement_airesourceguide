@@ -112,7 +112,7 @@ class utils {
     }
 
     private static function build_prompt(string $content): string {
-        $maxlength = 4000;
+        $maxlength = (int) get_config('aiplacement_airesourceguide', 'max_content_length') ?: 4000;
         if (strlen($content) > $maxlength) {
             $content = substr($content, 0, $maxlength) . "\n\n[Content truncated]";
         }
