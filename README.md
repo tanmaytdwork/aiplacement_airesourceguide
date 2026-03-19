@@ -78,7 +78,7 @@ This plugin uses an application-level cache keyed by course module ID. No user-s
 
 ## Bug tracker
 
-Please report issues at: https://github.com/tanmaytdwork/aiplacement_airesourceguide/issues
+Please report issues at: https://github.com/tanmaytdwork/moodle-aiplacement_airesourceguide/issues
 
 ---
 
