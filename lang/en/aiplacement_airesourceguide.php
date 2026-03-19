@@ -21,7 +21,6 @@ $string['source_encyclopedia'] = 'Encyclopedia (Wikipedia)';
 $string['source_documentation'] = 'Technical Documentation (DevDocs)';
 $string['source_news'] = 'News & Articles (Google News)';
 $string['source_books'] = 'Books (Google Books)';
-$string['source_interactive'] = 'Interactive Learning (Khan Academy)';
 $string['airesourceguide:viewreferences'] = 'View AI-generated learning references';
 $string['emptypage'] = 'This page has no content to analyze.';
 $string['emptyairesponse'] = 'The AI service returned an empty response. Please try again.';

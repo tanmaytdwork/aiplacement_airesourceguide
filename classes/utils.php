@@ -37,11 +37,6 @@ class utils {
             'icon'  => 'book',
             'url'   => 'https://www.google.com/search?tbm=bks&q={query}',
         ],
-        'interactive' => [
-            'label' => 'source_interactive',
-            'icon'  => 'play-circle',
-            'url'   => 'https://www.khanacademy.org/search?page_search_query={query}',
-        ],
     ];
 
     public static function get_references(int $cmid): array {
@@ -219,7 +214,7 @@ class utils {
         $config = get_config('aiplacement_airesourceguide', 'enabled_sources');
 
         if (empty($config)) {
-            return ['academic', 'video', 'encyclopedia', 'documentation', 'interactive'];
+            return ['academic', 'video', 'encyclopedia', 'documentation'];
         }
 
         return explode(',', $config);

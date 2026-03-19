@@ -28,7 +28,6 @@ if ($hassiteconfig) {
             'video'         => 1,
             'encyclopedia'  => 1,
             'documentation' => 1,
-            'interactive'   => 1,
         ],
         [
             'academic'      => new lang_string('source_academic', 'aiplacement_airesourceguide'),
@@ -37,7 +36,6 @@ if ($hassiteconfig) {
             'documentation' => new lang_string('source_documentation', 'aiplacement_airesourceguide'),
             'news'          => new lang_string('source_news', 'aiplacement_airesourceguide'),
             'books'         => new lang_string('source_books', 'aiplacement_airesourceguide'),
-            'interactive'   => new lang_string('source_interactive', 'aiplacement_airesourceguide'),
         ]
     ));
 }
